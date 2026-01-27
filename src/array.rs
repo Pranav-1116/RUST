@@ -4,7 +4,7 @@ pub fn run(){
     let  mut num =[10,20,20];
     let zeros =[0;5];
     num [2] =40;
-    println!("{:?}",num);
+    println!("{}",num[2]);
     println!("{:?}",zeros);
 //Strings 
 println!("{}","Strings");
