@@ -1,13 +1,13 @@
 //mod sample;
 //mod array;
-mod ownership_borrowing ;
-
+//mod ownership_borrowing ;
+mod lifetime;
 
 fn main() {
-    let x=10;
-    println!("hello world {} ",x);
+   
     //sample::run();
     //array::run();
-    ownership_borrowing::run();
+    //ownership_borrowing::run();
+    lifetime::run();
 
 }
