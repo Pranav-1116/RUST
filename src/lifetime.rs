@@ -26,7 +26,7 @@ println!("SINGLE LIFETIME PARAMETER ");
     }
 let s1 =String::from("Rust");
     let s2 = String::from("programming");
- let s3=20;
+ let s3:i32 =20;
    let  result=short(s1.as_str(),s2.as_str(),& s3);
    println!("{}",result );
 

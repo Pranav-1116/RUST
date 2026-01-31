@@ -7,6 +7,7 @@ pub fn run(){
     println!("{}",num[2]);
     println!("{:?}",zeros);
 //Strings 
+
 println!("{}","Strings");
  let name :&str="rust";
  println!("{}",name);

@@ -2,7 +2,8 @@
 //mod array;
 //mod ownership_borrowing ;
 //mod lifetime;
-mod structs;
+//mod structs;
+mod problemsolving;
 
 fn main() {
    
@@ -10,6 +11,7 @@ fn main() {
     //array::run();
     //ownership_borrowing::run();
     //lifetime::run();
-    structs::run();
+    //structs::run();
+    problemsolving::run();
 
 }
