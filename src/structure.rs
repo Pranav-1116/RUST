@@ -21,6 +21,110 @@ pub fn run (){
 
 
   }
+  //NORMAL impl
+ impl Person{
+fn _print(&self){
+  println!("{} is {}",self.age,self.salary);
+}
+ }
+
+ //Trait 
+
+ trait Speak{
+  fn speak (&self);
+ }
  
 
+   struct Dog;
+   struct Cat;
+   
+    
+    // TRAIT impl
+   impl Speak for Dog{
+    fn speak(&self){
+      println!("the Dog barks");
+    }
+   }
+   impl Speak for Cat{
+    fn speak(&self){
+      println!("the Cat says meow");
+    }
+   }
+
+ {
+  let dog =Dog;
+  let cat =Cat;
+  dog.speak();
+  cat.speak();
+
+
+ }
+ 
+
+ //Another example for trait 
+
+ 
+{
+ trait Transfer{
+  fn transfer(&mut self, amount :u32);
+ }
+
+ struct Wallet{
+  balance :u32,
+ }
+
+ impl Transfer for Wallet{
+ fn transfer(&mut self ,amount:u32){
+  self.balance +=amount;
+ }
+ }
+ let mut to=Wallet {balance:100} ;
+  to.transfer(5000);
+  println!("The transfered amouny is : {} ",to.balance);
+}
+
+
+
+
+ // problems on trait 
+
+
+
+ {
+trait Banking{
+  fn deposite(&mut self, amount:u32);
+  fn withdrawl (&mut self ,amount :u32) -> bool;
+
+}
+
+struct Transaction {
+balance :u32,
+}
+
+impl Banking for Transaction{
+  fn deposite(&mut self,amount:u32){
+ self.balance +=amount;
+
+  }
+  fn withdrawl (&mut self,amount :u32)->bool {
+if amount <= self.balance{
+  self.balance -=amount;
+  true
+}
+else{
+  false
+}
+  }
+}
+let mut _account =Transaction{balance :10000};
+let mut _account =Transaction{balance:10000};
+_account.deposite(10000);
+_account.withdrawl(2000);
+
+println!("The Deposited Amount is : {}",_account.balance);
+println!("The Withdrawl Amount is : {}",_account.balance);
+
+
+
+ }
 }

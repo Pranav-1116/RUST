@@ -1,4 +1,4 @@
-mod sample;
+//mod sample;
 //mod array;
 //mod ownership_borrowing ;
 //mod lifetime;
@@ -7,7 +7,7 @@ mod structure;
 
 fn main() {
    
-    sample::run();
+    //sample::run();
     //array::run();
     //ownership_borrowing::run();
     //lifetime::run();
